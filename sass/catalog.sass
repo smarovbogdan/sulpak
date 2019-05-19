@@ -1,0 +1,108 @@
+@import 'main'
+@import "block/aside"
+@import 'block/owl-carousel'
+@import "block/productList"
+@import 'block/pagination'
+@import 'block/specialProducts'
+@import 'block/tooltip'
+@import 'block/breadcrumbs'
+@import 'block/clip'
+@import 'block/link'
+@import 'block/buttonStarsHeartCompare'
+.catalog
+	.h1
+		color: #333333
+		font-size: 30px
+		font-weight: 500
+		line-height: 1.1
+		text-transform: uppercase
+		margin-top: 5px
+		margin-bottom: 25px
+		@media only screen and (max-width : 480px)
+			font-size: 20px
+
+.btn-favorites
+	&.active
+		path
+			fill: $accent
+
+.pageSeo
+	margin-top: 60px
+	h3
+		color: #333333
+		font-size: 24px
+		font-weight: 400
+		line-height: 18px
+		margin-bottom: 20px
+	p
+		color: #666666
+		font-size: 16px
+		font-weight: 400
+		line-height: 24px
+
+
+
+.btn-border-red-sm
+	display: none !important
+	margin-bottom: 25px
+	font-size: 12px
+	@media only screen and (max-width : 580px)
+		display: inline-block !important
+
+.sortingSelect
+	position: relative
+	&__title
+		color: #666666
+		font-size: 14px
+		font-weight: 500
+		margin-right: 5px
+	.link
+		color: #e3000f
+		margin-right: 5px
+	&__header
+		position: relative
+	&__dropdown
+		background: #fff
+		display: flex
+		flex-direction: column
+		top: calc(100% + 11px)
+		border: 1px solid #d4dbe4
+		padding: 10px
+		left: -8px
+		z-index: 99
+		align-items: flex-start
+		transform-origin: top
+		transform: scaleY(0)
+		position: absolute
+		transition: .25s
+		padding-right: 29px
+		@media only screen and (max-width : 1200px)
+			top: calc(100% + 14px)
+		@media only screen and (max-width : 580px)
+			left: -4px
+			top: calc(100% + 12px)
+			padding: 5px
+		.link
+			opacity: 0
+			margin-bottom: 5px
+			&:last-child
+				margin-bottom: 0
+			&:hover
+				border-style: solid
+	&.active
+		.sortingSelect__dropdown
+			transform: scaleY(1)
+			.link
+				opacity: 1
+	.btn-border-red 
+		@media only screen and (max-width : 768px)
+			display: flex !important
+			margin-right: 2rem !important
+		@media only screen and (max-width : 580px)
+			display: none !important
+	
+// @import 'product'
+
+// @import 'checkout'
+// @import 'promotions'
+// @import 'promotion'

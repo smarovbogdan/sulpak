@@ -1,0 +1,132 @@
+.aside
+	&__comparison
+		border: 1px solid #ececec
+		background-color: #f9f9f9
+		padding-top: 10px
+		padding-left: 10px
+		padding-bottom: 20px
+		.title
+			color: #333333
+			font-size: 14px
+			font-weight: 700
+			padding-bottom: 10px
+			display: inline-block
+			@media only screen and (max-width : 1200px)
+				padding-bottom: 0
+				margin-right: 10px
+		.list
+			.item
+				line-height: 1.5
+				font-size: 14px
+				span
+					color: #999999
+	&__filters
+		margin-top: 20px
+		padding-top: 20px
+		border: 1px solid #ececec
+		.clip
+			.clip-body
+				max-height: 143px
+				&:after
+					display: none
+		.filter
+			padding-top: 20px
+			padding-bottom: 30px
+			padding-left: 10px
+			&:first-child
+				padding-top: 0
+			&:hover
+				background-color: #f9f9f9
+			.title
+				color: #333333
+				font-size: 14px
+				font-weight: 500
+				margin-bottom: 15px
+				display: inline-block
+			.item
+				margin-bottom: 10px
+				a
+					&:hover
+						text-decoration: none
+				.checkbox_label
+					transition: .25s
+					margin-left: 8px
+					&:hover
+						color: $accent
+						text-decoration: none
+				&_span
+					color: #999999
+					padding-left: 2px
+			#sliderbar
+				height: 5px
+				box-shadow: none
+				background-color: #cccccc
+				border: 0
+				border-radius: 0
+				margin-left: 5px
+				margin-right: 25px
+				.noUi-connect
+					background-color: $accent
+				.noUi-handle
+					width: 22px
+					height: 22px
+					border: 0
+					top: -10px
+					cursor: pointer
+					box-shadow: 0 1px 5px rgba(153, 153, 153, 0.43)
+					background-color: #cccccc
+					background-image: linear-gradient(to top, #d7d7d7 0%, #ffffff 100%)
+					&:before,&:after
+						display: none
+			&-price
+				.title
+					margin-bottom: 25px
+				.sidebar__inputs
+					display: flex
+					align-items: center
+					margin-top: 25px
+					color: #cccccc
+					.sidebar__input
+						width: 64px
+						height: 32px
+						border: 1px solid #cccccc
+						background-color: #ffffff
+						padding-left: 10px
+						color: #666666
+						font-size: 12px
+						font-weight: 400
+					.btn-img
+						margin-left: 20px
+						padding: 5px
+						display: flex
+						align-items: center
+					span
+						margin: 0 5px
+	@media only screen and (max-width : 1200px)
+		position: absolute
+		width: 300px
+		background: #fff
+		z-index: 99999
+		left: -100%
+		transition: .5s
+		&.active
+			left: 0
+			top: 115px
+		span:first-child
+			padding: 15px 10px
+	@media only screen and (max-width : 768px)
+		z-index: 99999
+		.box-shadow
+			box-shadow: none
+			border: 0
+		.mobile-title
+			display: flex
+			position: relative
+			color: #333333
+			padding-left: 5px
+			font-size: 14px
+			font-weight: 500
+			padding-top: 10px
+			padding-bottom: 10px
+			.header_mobile-close
+				top: 14px

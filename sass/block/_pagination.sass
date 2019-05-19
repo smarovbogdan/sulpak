@@ -1,0 +1,64 @@
+.pagination
+	width: 100%
+	justify-content: space-between
+	display: flex
+	height: 53px
+	box-shadow: 0 0 10px #e1e5e1
+	border: 1px solid #ececec
+	background-color: #ffffff
+	margin-top: -5px
+	&__prev,&__next
+		width: 55px
+		flex-shrink: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		transition: .25s
+		path
+			transition: .25s
+			fill: #b3b3b3
+		&:hover
+			background: $accent
+			path
+				fill: white
+		&.disabledPaginatorButton
+			cursor: default !important
+			background: none
+			pointer-events: none
+			path
+				fill: #f0f0f0 !important
+
+	&__prev
+		border-right: 1px solid #ececec
+	&__next
+		border-left: 1px solid #ececec
+	&__pages
+		display: flex
+		align-items: center
+		.page,.dots
+			width: 53px
+			height: 100%
+			display: flex
+			align-items: center
+			color: $accent
+			justify-content: center
+			text-decoration: none
+			transition: .25s
+			font-weight: 500
+			font-size: 16px
+		.page
+			&.current
+				color: #b3b3b3
+				&:hover
+					background: inherit
+					color: #b3b3b3
+			&:hover
+				background: $accent
+				color: white
+	@media only screen and (max-width : 480px)
+		width: 300px
+		margin: 0 auto
+		margin-top: -5px
+		&__pages
+			.page,.dots
+				width: 26px

@@ -1,0 +1,930 @@
+@import 'main'
+@import 'block/link'
+.checkout
+	.tab_body
+		height: auto
+		@media only screen and (max-width : 1200px)
+			padding-bottom: 10px
+	&__header
+		border-bottom: 5px solid #e4e4e4
+		padding-bottom: 9px
+	&__body
+		background-color: #f9f9f9
+		padding-top: 30px
+		padding-bottom: 100px
+	.checkout__choose-person
+		a
+			color: #333333
+			font-size: 14px
+			font-weight: 500
+			line-height: 18px
+			text-transform: uppercase
+			padding-bottom: 10px
+			text-decoration: none
+			border-bottom: 5px solid transparent
+			transition: .25s
+			margin-right: 55px
+			&.active,&:hover
+				border-bottom: 5px solid $accent
+			@media only screen and (max-width : 768px)
+				margin-right: 30px
+	.checkout__comment
+		text-align: right
+		padding: 0 10px
+		width: 100%
+		margin-top: 30px
+		textarea
+			margin-right: 5px
+			width: 100%
+			height: 157px !important
+			border: 1px solid #cccccc
+			background-color: #ffffff
+			display: inline-block
+			resize: none
+			color: #666
+			font-family: 'Rubik'
+			font-size: 14px
+			font-style: italic
+			padding-left: 20px
+			padding-top: 10px
+			font-weight: 600
+			&::placeholder
+				color: #ccc
+
+#promocod-info
+	text-align: center
+	max-width: 445px
+	min-height: 233px
+	box-shadow: 0 10px 10px rgba(102, 102, 102, 0.3)
+	border: 1px solid #d71a21
+	background-color: #ffffff
+	margin: 40px auto
+	position: relative
+	padding: 30px 35px
+	h3
+		color: $accent
+		font-size: 18px
+		font-weight: 400
+		margin-bottom: 15px
+	p
+		color: #999
+		font-size: 14px
+		font-weight: 400
+
+.promocod-info-btn
+	color: #666
+.promocod
+	a
+		color: #666
+
+
+.vertical-tabs
+	.delivery
+		&__form
+			display: none
+	.pay
+		&-form
+			display: none
+	.tab-item
+		margin-bottom: 30px
+		&__header
+			display: flex
+			align-items: center
+			.tab-number
+				display: inline-flex
+				justify-content: center
+				align-items: center
+				width: 55px
+				height: 55px
+				border: 1px solid #d32027
+				background-color: #ffffff
+				color: #333333
+				font-size: 18px
+				font-weight: 500
+				line-height: 18px
+				text-transform: uppercase
+			.tab-title
+				color: #333333
+				font-size: 14px
+				font-weight: 500
+				line-height: 18px
+				text-transform: uppercase
+				margin-left: 25px
+			.link-dashed
+				font-size: 12px
+				margin-left: 15px
+				display: none
+			.link-dashed-delivery
+				font-size: 12px
+				margin-left: 15px
+				display: none
+
+		&.active
+			.tab-item__body
+				display: block
+			.link-dashed
+				display: none
+		&.disabled
+			.tab-item__header
+				opacity: 0.5
+				.tab-number
+					border: 1px solid #999999
+		&__body
+			padding-left: 80px
+			//display: none
+			.customer-info__form
+				width: 460px
+				.only_Organization
+					display: none
+					.input-row
+						margin-bottom: 10px
+						display: flex
+						align-items: baseline
+						justify-content: space-between
+						@media only screen and (max-width : 992px)
+							flex-direction: column
+							margin-bottom: 0
+					.input-block
+						flex-direction: column
+						align-items: flex-start
+						justify-content: flex-start
+						width: 49%
+						@media only screen and (max-width : 992px)
+							width: 100%	
+							margin-bottom: 10px
+
+					.adress
+						width: 100%
+						margin-bottom: 10px
+					.validationMessage
+						display: none
+					span
+						font-size: 14px
+						display: block
+					input
+						width: 100%
+						padding: 0 5px
+						margin: 4px 0
+						height: 44px
+						border: 1px solid #ccc
+						background-color: #fff
+				.row-input
+					margin-bottom: 20px
+					display: flex
+					align-items: center
+					.btn-buy
+						width: 213px
+						height: 44px
+						font-size: 14px
+						font-weight: 500
+						line-height: 18px
+						text-transform: uppercase
+						display: flex
+						align-items: center
+						justify-content: center
+						margin: 0 auto
+					.checkbox
+						&_label
+							font-size: 12px
+							color: #333333
+					.left
+						flex: 0 0 100px
+						span
+							color: #333333
+					.right
+						width: 100%
+						@media only screen and (max-width : 768px)
+							display: flex
+							align-items: center
+						input
+							padding-left: 10px
+							width: 358px
+							height: 44px
+							border: 1px solid #cccccc
+							background-color: #ffffff
+							@media only screen and (max-width : 992px)
+								width: 100%
+					&.phone
+						.operator-code
+							width: 58px
+							margin-right: 15px
+						input
+							width: 250px
+							@media only screen and (max-width : 768px)
+								width: 100%
+						.right
+							span
+								margin-right: 10px
+			.delivery__form
+				padding-top: 20px
+				background: #fff
+				.tab_header
+					padding-left: 15px
+					&-item
+						padding: 15px 14px
+						margin-right: 15px
+						font-size: 18px
+						text-transform: inherit
+				iframe
+					display: none
+					&.active
+						display: block
+			.delivery_box-store
+				.header
+					display: flex
+					width: 100%
+					align-items: center
+					background-color: #f9f9f9
+					height: 80px
+					padding-left: 15px
+					@media only screen and (max-width : 992px)
+						padding-left: 10px
+						padding-right: 10px
+					.left
+						flex: 0 0 350px
+						display: flex
+						align-items: center
+						@media only screen and (max-width : 992px)
+							flex: 0 0 100%
+						span
+							flex-shrink: 0
+							margin-right: 10px
+							color: #666666
+							font-size: 14px
+					.right
+						width: 100%
+				.btn-buy
+					@media only screen and (max-width : 1200px)
+						width: 213px
+						height: 44px
+						font-size: 14px
+						font-weight: 500
+						line-height: 18px
+						text-transform: uppercase
+						display: flex !important
+						align-items: center
+						justify-content: center
+						margin: 20px auto
+				.choose-list
+					margin-bottom: 0
+					.tab_header-item
+						background: none
+						margin: 0
+						padding: 0
+						color: #333333
+						text-transform: inherit
+						font-size: 12px
+						display: flex
+						align-items: center
+						margin-right: 15px
+						span
+							border-bottom: 1px dashed transparent
+							transition: .25sl
+						img
+							margin-right: 5px
+							max-height: 15px
+							width: auto
+						&:after
+							display: none
+						&.active
+							color: $accent
+							span
+								border-bottom: 1px dashed $accent
+			.delivery_sub
+				img
+					max-width: 100%
+					height: auto
+				&-list
+					height: 420px
+					overflow: auto
+					margin-bottom: 50px
+					.item
+						display: flex
+						border-bottom: 1px solid #e2e2e2
+						margin-left: 15px
+						padding: 15px 0
+						justify-content: space-between
+						padding-right: 35px
+						.left
+							display: flex
+							align-items: center
+							max-width: 52%
+							flex: 0 0 52%
+							img
+								margin-right: 15px
+							.adress
+								font-size: 14px
+								font-weight: 500
+								color: #666666
+							.schedule
+								color: #999999
+								font-size: 12px
+						.right
+							display: flex
+							align-items: flex-start
+							.pickup
+								span
+									font-size: 12px
+									color: #999999
+								p
+									font-weight: 500
+									color: #333333
+									font-size: 12px
+							.btn-pickup
+								margin-left: 50px
+						&.active
+							background-color: #fff5cd
+							margin-left: 0
+							padding-left: 15px
+							.btn-pickup
+								background: $accent
+								font-size: 0
+								width: 85px
+								height: 39px
+								position: relative
+								align-items: center
+								justify-content: center
+								text-align: center
+								&:after
+									content: ''
+									width: 12px
+									height: 10px
+									position: absolute
+									background: url('../img/ok.png')
+									margin-left: -6px
+						&.disabled
+							.btn-pickup
+								background-color: #f9f9f9
+								border-color: #f9f9f9
+								color: #999999
+				.btn-buy
+					width: 213px
+					height: 44px
+					font-size: 14px
+					font-weight: 500
+					line-height: 18px
+					text-transform: uppercase
+					display: flex
+					align-items: center
+					justify-content: center
+					margin: 0 auto
+					margin-bottom: 35px
+				.info
+					color: #999999
+					font-size: 12px
+					line-height: 16px
+					padding-left: 15px
+					padding-right: 60px
+					padding-bottom: 40px
+			.delivery_box-courier
+				padding-bottom: 50px
+				.row-input
+					padding-left: 15px
+					@media only screen and (max-width : 992px)
+						padding-left: 10px
+						padding-right: 10px
+					.title
+						color: #666666
+						font-size: 14px
+						font-weight: 400
+						line-height: 24px
+						padding-bottom: 10px
+						padding-top: 20px
+					.box
+						display: flex
+						justify-content: space-between
+						padding-right: 10px
+						padding-bottom: 10px
+						@media only screen and (max-width : 992px)
+							padding-right: 0
+						.address
+							max-width: 373px
+							@media only screen and (max-width : 992px)
+								max-width: none
+								width: 100%
+						input
+							padding: 0 14px
+							@media only screen and (max-width : 992px)
+								max-width: none
+						.day
+							margin-right: 20px
+							background: url(../img/date-icon.svg) no-repeat 
+							background-position: right
+						label 
+							position: relative
+							&.day
+								max-width: 226px
+								margin-right: 21px
+							&.time
+								max-width: 172px
+						// .time
+						// 	max-width: 172px
+						// 	position:relative
+
+						label > .icon 
+							position: absolute
+							top: 50%
+							right: 10px
+							transform: translateY(-50%)
+						label > input 
+							padding-right: calc(32px + 10px + 8px) /* icon width + icon padding-left + desired separation*/
+							height: 44px
+							max-width: 100%
+
+
+						.time
+							background: url(../img/time-icon.svg) no-repeat 
+							background-position: right
+						&-start
+							justify-content: flex-start
+					input
+						padding-left: 10px
+						width: 358px
+						height: 44px
+						border: 1px solid #cccccc
+						background-color: #ffffff
+						max-width: 100px
+						@media only screen and (max-width : 992px)						
+							width: 130px
+				.btn-buy
+					width: 213px
+					height: 44px
+					font-size: 14px
+					font-weight: 500
+					line-height: 18px
+					text-transform: uppercase
+					display: flex
+					align-items: center
+					justify-content: center
+					margin: 35px auto
+					margin-bottom: 0
+
+			&.pay-form
+				margin-left: 80px
+				padding-left: 0
+				.pay-form-container
+					background: #fff
+					padding-top: 20px
+					padding-left: 13px
+					padding-right: 13px
+					padding-bottom: 35px
+				.tab_header
+					flex-wrap: wrap
+					margin-bottom: 0
+					@media only screen and (max-width : 992px)
+						flex-direction: column
+					.tab_header-item
+						padding: 0
+						background: none
+						margin-bottom: 15px
+				.tab_body
+					margin-bottom: 0
+					.item
+						padding-right: 0
+						color: #999999
+						font-size: 12px
+						p
+							color: #999999
+							font-weight: 400
+							line-height: 16px
+						.item-parts_input
+							display: flex
+							padding: 25px 0
+							align-items: center
+							.left
+								flex: 0 0 185px
+								max-width: 185px
+								margin-right: 15px
+					.item-parts
+						.current
+							font-size: 14px
+							text-transform: inherit
+						p
+							color: #666666
+							font-size: 14px
+						.p
+							color: #999999
+							font-weight: 400
+							line-height: 16px
+.right-side
+	background: #fff
+	.header
+		height: 40px
+		background-color: #f9f9f9
+		display: flex
+		align-items: center
+		padding-left: 25px
+		color: #333333
+		font-size: 14px
+		font-weight: 500
+		line-height: 18px
+		text-transform: uppercase
+	.list-item
+		&>.item
+			padding-left: 20px
+			padding-top: 25px
+			padding-bottom: 30px
+			padding-right: 20px
+			border-bottom: 1px solid #e2e2e2
+			.top
+				display: flex
+				.product_code
+					margin-top: 5px
+					color: #999999
+				.left
+					display: flex
+					flex-direction: column
+					.title
+						color: #666666
+						font-size: 13px
+						span
+							color: #999999
+						&:hover
+							color: $accent
+							text-decoration: none
+							span
+								color: $accent
+
+				.right
+					display: flex
+					flex-direction: column
+					margin-left: 20px
+					flex-shrink: 0
+					.price
+						color: #000000
+						font-size: 16px
+						font-weight: 500
+						line-height: 24px
+			.bottom
+				margin-top: 20px
+				display: flex
+				align-items: center
+				.remove
+					margin-left: 20px
+					display: inline-flex
+					align-items: center
+					img
+						margin-right: 5px
+					.link
+						color: #333333
+			.item_additional
+				.price
+					flex-shrink: 0
+	.promocod
+		padding: 20px
+		.top
+			display: flex
+			margin-bottom: 7px
+			input[type="text"]
+				padding-left: 15px
+				width: 100%
+				border: 1px solid #ccc
+				@media only screen and (max-width : 769px)
+					padding: 8px 0
+					padding-left: 15px
+			.btn
+				margin-left: 10px
+				display: flex !important
+		.info
+			color: #333333
+			font-size: 12px
+			font-weight: 400
+			line-height: 18px
+			text-decoration: underline
+			margin-top: 5px
+	.total
+		padding: 22px
+		padding-top: 15px
+		background-color: #fff5cd
+		.btn-buy
+			width: 100%
+			margin-top: 20px
+			height: 56px
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 18px
+			font-weight: 500
+			line-height: 18px
+			text-transform: uppercase
+			display: none
+			&.active
+				display: flex
+		.top
+			.row-info
+				display: flex
+				justify-content: space-between
+				color: #666666
+				font-size: 14px
+				line-height: 24px
+				.left
+					flex: 0 0 200px
+					@media only screen and (max-width : 1200px)
+						flex: 0 0 134px
+					@media only screen and (max-width : 768px)
+						flex: 0 0 170px
+					@media only screen and (max-width : 480px)
+						flex: 0 0 134px  !important
+				.right
+					b
+						font-weight: 500
+				&.large
+					margin-top: 5px
+					.left
+						color: #333333
+						font-size: 18px
+						font-weight: 500
+						line-height: 18px
+						text-transform: uppercase
+					.right
+						b
+							color: $accent
+							font-size: 24px
+							font-weight: 500
+							line-height: 18px
+	@media only screen and (max-width : 768px)
+		margin-top: 10px
+	
+.timebox_timepicker
+	max-width: 150px
+	position: relative
+	.icon 
+		position: absolute
+		top: 50%
+		right: 10px
+		transform: translateY(-50%)
+	input 
+		padding-right: calc(32px + 10px + 8px)
+		height: 44px
+		max-width: inherit !important
+.item-installment
+	h3
+		margin: 15px 0
+		font-weight: 600
+		font-size: 14px
+	.h3-bottom
+		border-bottom: 1px solid #999		
+
+.term-credit 
+	font-size: 12px
+	text-transform: uppercase
+	color: #333
+	font-weight: normal
+	margin: 15px 0
+
+#slideBarMonth
+	margin: 0 10px
+	.noUi-base
+		position: none
+	.noUi-connect
+		background: $accent
+	.noUi-pips-horizontal
+		padding: 10px 0
+		height: 80px
+		top: 100%
+		left: 0
+		width: 100%
+		position: absolute
+		color: #999
+	.noUi-marker
+		display: none
+.banks-list-header
+	display: flex
+	margin-top: 65px
+	.banks-list-title 
+		font-size: 12px
+		text-transform: uppercase
+		color: #333
+		font-weight: normal
+		width: 175px
+	.payt-info-text 
+		color: #999
+		font-size: 12px
+		text-transform: none
+#three-info
+	margin-top: 15px
+	.tab-content.active 
+		display: block
+	#customer-payment .bank-type-tabs .tab-item 
+		margin: 15px 0
+	.tab-item.bank-info 
+		display: flex
+		align-items: center
+	.vertical-tabs .tab-item 
+		margin: 30px 0
+		color: #a7a7a7
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+	.tab-item .radio 
+		display: flex
+		align-items: center
+		justify-content: center
+		border: 1px solid #a4a4a4
+		width: 22px
+		height: 22px
+		border-radius: 50%
+		margin-right: 2px
+		box-sizing: border-box
+	.tab-item .radio .inner-radio 
+		width: 14px
+		height: 14px
+		border-radius: 50%
+	input[type='radio'] 
+		display: none
+
+	.icon.icon-home-credit 
+		background-position: -6px -7px
+
+	.icon 
+		display: inline-block
+		height: 40px
+		width: 150px
+		background-image: url(../img/sprite-banks.png)
+		@media only screen and (max-width : 480px)
+			width: 125px
+	.bank-payment-type 
+		width: calc(100% - 185px)
+		display: flex
+		justify-content: space-between
+		padding: 0 0 0 15px
+		box-sizing: border-box
+		@media only screen and (max-width : 480px)
+			display: block
+	.payt 
+		font-size: 16px
+		color: #333
+		font-weight: 600
+	.installment-word 
+		font-size: 14px
+		color: #47b525
+		font-weight: normal
+		margin: 0
+		font-weight: 500
+	.vertical-tabs .tab-item 
+		margin: 30px 0
+		color: #a7a7a7
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+	.iin 
+		margin: 0
+		text-transform: uppercase
+		display: flex
+		align-items: center
+		color: #333
+		font-size: 16px
+	.iin input 
+		height: 44px
+		border: 1px solid #ccc
+		line-height: 220px
+		padding: 0 10px
+		box-sizing: border-box
+		width: 100%
+		margin: 10px 0 10px 15px
+	input[type="text"], input[type="tel"], input[type="number"], input[type="password"] 
+		height: 44px
+		border: 1px solid #ccc
+		line-height: 44px
+		padding: 0 5px
+		color: #666
+		font-family: 'Rubik'
+		box-sizing: border-box
+	.checkbox
+		margin: 0
+		color: #333
+		font-size: 12px
+		font-family: 'Rubik'
+		text-transform: inherit
+		align-items: flex-start
+	.shopping-cart-container label 
+		cursor: pointer
+		text-transform: uppercase
+		display: flex
+		align-items: center
+	span.installment-word 
+		color: #47b525
+		font-size: 14px
+		font-weight: 500
+	.icon.icon-eurasian 
+		background-position: -160px -7px
+	.icon.icon-orange 
+		background-position: -370px -7px
+	.tab-item.active .radio .inner-radio
+		background: #47b525
+
+@media only screen and (max-width : 1200px)
+
+	.vertical-tabs .tab-item__body
+		padding-left: 0
+		padding-top: 20px
+	.vertical-tabs .tab-item__body .customer-info__form .row-input
+		flex-direction: column
+		align-items: flex-start
+		justify-content: flex-start
+		display: block
+		.left
+			margin-bottom: 5px
+	.vertical-tabs .tab-item__body.pay-form
+		margin-left: 0
+		margin-top: 10px
+	.vertical-tabs .tab-item__body .delivery__form .tab_header-item
+		background: none
+	.vertical-tabs .tab-item__body .customer-info__form
+		width: auto
+	.vertical-tabs .tab-item__body .delivery_box-courier .row-input .box
+		flex-wrap: wrap
+		justify-content: flex-start
+		.address
+			margin-bottom: 10px
+			margin-right: 10px
+		.house
+			margin-right: 20px
+	.vertical-tabs .tab-item__body.pay-form .tab_body .item .item-parts_input
+		flex-wrap: wrap
+		.right
+			margin-top: 15px
+
+	.delivery_box-store
+		.body-mobile
+			padding: 10px
+			color: #999999
+			font-size: 12px
+			line-height: 16px
+		.choose_store
+			font-size: 14px
+			color: #666666
+			line-height: 24px
+			padding-left: 10px
+			display: block
+			width: 100%
+		.city
+			font-size: 14px
+			color: #666666
+			line-height: 24px
+			padding-left: 10px
+			font-weight: 700
+		.header-mobile
+			.map
+				display: inline-flex
+				margin-left: 10px
+				align-items: center
+				margin-top: 10px
+				img
+					width: 10px
+					height: 13px
+					margin-right: 5px
+			.shechude
+				color: #666666
+				font-size: 14px
+				ine-height: 24px
+				padding-left: 10px
+				margin-top: 10px
+			.nice-select
+				float: none
+				margin: 0 10px
+				margin-top: 10px
+				max-width: 280px
+				.current
+					max-width: 90%
+					display: inline-block
+					overflow: hidden
+
+.no-margin-footer
+	footer
+		margin-top: 0
+.mobile-buy
+	display: none
+	@media only screen and (max-width : 768px)
+		width: 100%
+		margin-top: 20px
+		margin-right: 10px
+		margin-left: 10px
+		max-width: 281px
+		height: 56px
+		display: flex
+		-webkit-box-align: center
+		-webkit-align-items: center
+		-ms-flex-align: center
+		align-items: center
+		-webkit-box-pack: center
+		-webkit-justify-content: center
+		-ms-flex-pack: center
+		justify-content: center
+		font-size: 18px
+		font-weight: 500
+		line-height: 18px
+		text-transform: uppercase
+		margin: 0 auto
+		display: none !important
+		&.active
+			display: flex !important
+@media only screen and (max-width : 992px)
+	.vertical-tabs .tab-item__body .delivery_box-courier .row-input .box
+		.address
+			margin-right: 0
+@media only screen and (max-width : 480px)
+	.checkout .checkout__choose-person a
+		margin-right: 16px
+		font-size: 13px
+

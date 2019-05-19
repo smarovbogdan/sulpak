@@ -1,0 +1,71 @@
+@import 'main'
+@import 'block/productList'
+@import 'block/pagination'
+@import 'block/breadcrumbs'
+@import 'block/clip'
+@import 'block/aside'
+@import 'block/buttonStarsHeartCompare'
+@import 'block/link'
+
+.catalog
+	.h1
+		color: #333333
+		font-size: 30px
+		font-weight: 500
+		line-height: 1.1
+		text-transform: uppercase
+		margin-top: 5px
+		margin-bottom: 25px
+		@media only screen and (max-width : 480px)
+			font-size: 20px
+
+.special-offer-section
+	p
+		margin-bottom: 34px
+		color: #666
+.bonus-text
+	margin: 50px 0
+	p
+		margin-bottom: 10px
+.h1-promotion
+	margin: 30px 0
+	color: #333
+	font-size: 30px
+	font-weight: 500
+	line-height: 1.1
+	text-transform: uppercase
+
+.aside__filters-promotion
+	.filter:first-child
+		border-bottom: 1px solid #e2e2e2
+		padding-bottom: 10px
+
+.btn-favorites
+	&.active
+		path
+			fill: $accent
+.productList__body-promotion
+	.item
+		@media only screen and (max-width : 992px)
+			margin-top: 30px
+	.item-first
+		margin-top: 0
+		@media only screen and (max-width : 992px)
+			margin-top: 30px
+.aside__filters 
+	.clip
+		.clip-body-promotions
+			max-height: 348px
+
+.catalog-promotion
+	position: relative
+	@media only screen and (max-width: 1200px)
+		.aside.active
+			top: 0
+.promotion-btn
+	display: block !important
+	@media only screen and (max-width : 768px)
+		margin-bottom: 30px
+		font-size: 12px
+
+

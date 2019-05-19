@@ -1,0 +1,172 @@
+
+@import 'main'
+@import 'block/specialProducts'
+@import 'block/owl-carousel'
+
+
+//Оставить на главной		
+.col-half
+	flex: 0 0 50%
+	max-width: 50%
+	position: relative
+	width: 100%
+	padding-right: 13px
+	padding-left: 13px
+
+
+//Оставить на главной
+#slider
+	height: 41rem
+	overflow: hidden
+	background-color: #f1f1f1
+	margin-bottom: 5rem
+	.owl-carousel
+		height: 41rem
+		@media only screen and (max-width : 992px)
+			height: 31rem
+	.owl-nav
+		button
+			position: absolute
+			display: flex
+			justify-content: space-between
+			top: 50%
+			transform: translateY(-50%)
+			padding: 20px !important
+			padding-left: 0px !important
+			&.owl-next
+				right: 0
+				padding-right: 0px !important
+	.owl-dots
+		position: absolute
+		right: 0
+		bottom: 20px
+		left: auto
+		transform: none
+		.owl-dot
+			width: 14px
+			height: 14px
+			background-color: #a1a1a1
+			margin-right: 7px
+			transition: .25s all
+			&.active
+				background-color: #d71a21
+				transform: scale(1.2)
+	@media only screen and (max-width : 992px)
+		height: 31rem
+
+@media only screen and (max-width : 768px)
+	#slider,#slider .owl-carousel
+		height: auto !important
+
+
+@media only screen and (max-width : 480px)
+	#slider,#slider .owl-carousel
+		height: 113px
+	#slider
+		.owl-dots
+			display: none
+		.owl-nav button
+			display: none
+
+//Оставить на главной
+#brands
+	.brands-carousel
+		.item
+			width: 100%
+			height: 10.5rem
+			border: 1px solid #e3e3e3
+			background-color: #ffffff
+			display: flex
+			align-items: center
+			justify-content: center
+			transition: .25s
+			&:hover
+				box-shadow: 0 0 5px #cbb2b2
+			a
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 100%
+				height: 100%
+		.owl-item
+			padding: 5px
+		img
+			width: auto
+	.container
+		border-bottom: 1px solid $border
+		padding-bottom: 90px
+		@media only screen and (max-width : 1200px)
+			padding-bottom: 70px
+//Оставить на главной
+#interesting
+	padding-bottom: 80px
+	.interesting_box
+		transition: .25s all
+		&-red
+			&:hover
+				box-shadow: 0 0 20px #fdb3b8
+		&-green
+			&:hover
+				box-shadow: 0 0 20px #c9edb4
+		&-blue
+			&:hover
+				box-shadow: 0 0 20px #a7d2e9
+	.interesting_download
+		height: 260px
+		border: 2px solid #d30f1c
+		display: flex
+
+		&-right
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 100%
+		&-link
+			color: #ea4c3a
+			text-decoration: none
+			display: flex
+			align-items: center
+			padding: 50px 0
+			img
+				margin-right: 15px
+				max-width: 90%
+	.interesting_download-left
+		img
+			height: 100%
+	.interesting_download-right
+		padding: 0 40px
+	.interesting-title
+		font-size: 2rem
+		font-weight: 400
+		line-height: 1.8rem
+		text-transform: uppercase
+	.interesting-text
+		color: #666666
+		text-align: center
+		padding-top: 1.5rem
+	.interesting-green
+		border: 2px solid #71bf44
+	.interesting-blue
+		border: 2px solid #57a1c8
+
+	@media only screen and (max-width : 1200px)
+		.interesting_box
+			margin-bottom: 2rem
+	@media only screen and (max-width : 768px)
+		#interesting .interesting_download-right
+			padding: 0 10px
+
+
+
+
+
+
+
+		
+// @import 'product'
+// @import 'catalog'
+// @import 'checkout'
+// @import 'promotions'
+// @import 'promotion'
+
+

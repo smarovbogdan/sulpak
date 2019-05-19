@@ -1,0 +1,47 @@
+.product-rating
+	display: flex
+	align-items: center
+	&__icon
+		color: #cccccc
+		&.active
+			color: #ffcc66
+	span
+		color: #666666
+		font-size: 12px
+		margin-left: 10px
+.product_price
+	text-align: left
+	display: inline-block
+	margin-top: 1.4rem
+	&-old
+		color: #666666
+		font-size: 1.6rem
+		line-height: 2.4rem
+		text-decoration: line-through
+	&-cost
+		color: #000000
+		font-size: 3rem
+		line-height: 2.4rem
+.product__tools
+	display: flex
+	.btn
+		background: none
+		border: 0
+		svg path
+			transition: .25s fill
+		&:hover
+			svg path
+				fill: $accent
+	.btn-favorites
+		border-right: 1px solid #ececec
+		padding-right: 20px
+		@media only screen and (max-width : 580px)
+			border-right: none
+			padding-right: 0
+	.btn-compare
+		padding-left: 20px
+		&.active
+			path
+				fill: $accent
+		@media only screen and (max-width : 580px)
+			padding-left: 10px		

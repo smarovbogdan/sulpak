@@ -1,0 +1,93 @@
+#specialProducts,.specialProducts
+	.container
+		border-bottom: 1px solid $border
+		padding-bottom: 30px
+	.product-slider
+		position: absolute
+		top: 0
+		opacity: 0
+		transition: 1s opacity
+		&.active
+			opacity: 1
+			z-index: 97
+	.owl-stage-outer
+		padding-top: 30px
+		padding-bottom: 20px
+		z-index: 99
+	.product-slider
+		padding-bottom: 20px
+	.owl-dots
+		left: 50%
+		transform: translateX(-50%)
+		top: 444px
+		position: absolute
+		z-index: 0
+		.owl-dot
+			width: 14px
+			height: 14px
+			background-color: #a1a1a1
+			margin-right: 7px
+			transition: .25s all
+			&.active
+				background-color: #d71a21
+				transform: scale(1.2)
+	.owl-item
+		transition: .15s all
+		&:hover
+			box-shadow: 0 0 1.9rem #dbc1c1
+			z-index: 98
+			.product-miniature_buttons
+				display: flex
+				opacity: 1
+				.btn-credit
+					margin-right: 5px
+	.tab_body
+		@media only screen and (max-width : 1200px)
+			height: 56rem
+		@media only screen and (max-width : 768px)
+			height: 54rem
+	@media only screen and (max-width : 1200px)
+		.product
+			padding: 15px 20px
+		.product_title
+			text-align: left
+		.owl-dots
+			top: 500px
+			z-index: 99
+		
+		.owl-item
+			&:hover
+				transform: scale(1)
+				box-shadow: none
+
+
+.specialProducts-simple
+	height: 58rem
+	.owl-dots
+		z-index: 99
+	@media only screen and (max-width : 1200px)
+		height: 70rem
+		.owl-dots
+			top: 485px
+	.h2
+		margin-bottom: 0
+	.container
+		border-bottom: 0
+		padding-bottom: 0
+		.product-slider
+			height: 47rem
+			opacity: 1
+
+@media only screen and (max-width : 768px)
+	.specialProducts .owl-dots
+		top: 430px
+		z-index: 99
+	.specialProducts .owl-stage-outer
+		z-index: 0
+	#specialProducts
+		.owl-dots
+			top: 436px
+	.product .productAvailability .tags__products .right
+		padding-left: 0
+		margin-top: 10px
+	

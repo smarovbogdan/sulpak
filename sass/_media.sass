@@ -1,0 +1,333 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+	#product >.tab_body>div
+		display: block
+		padding-top: 0
+	
+	.header_catalog-menu
+		display: none !important
+	html
+		font-size: 9px
+	header
+		.header_top 
+			.logo
+				padding-right: 0
+		.header_bottom
+			text-align: center
+			display: flex 
+			justify-content: center
+			.header_catalog-header
+				padding-left: 0
+				i
+					padding-right: 0
+					margin: 0 auto
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/*Disable Animation on Mobile Devices*/
+	html
+		font-size: 8px
+	
+	header .header_bottom .main_search.active .header_search-fixed
+		display: flex !important
+	header .header_bottom .header_search-mobile
+		width: 100%
+	header .header_bottom .header_search-fixed
+		display: block
+		z-index: 9999
+		position: absolute
+		width: 100%
+		left: 0
+		top: 100%
+		background: #fff
+		padding: 10px
+		input
+			display: block !important
+			border: 2px solid #e2e2e2
+		.header_search-btn
+			position: absolute
+			right: 10px
+			background: none
+			top: 0
+			svg
+				path
+					fill: $accent
+
+
+	.main_search
+		position: static
+		.header_search:first-child
+			&:hover
+				background: #a81218
+	.header_bottom
+		.home-btn
+			display: flex
+			border-right: 1px solid #e5272e
+			transition: .25s
+			position: relative
+			a
+				width: 100%
+				height: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				z-index: 1
+			&:hover
+				background: #a81218
+			&:after
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100%
+				border-right: 1px solid #c3181e
+				left: 0
+	.header_bottom .container
+		max-width: 100%
+	
+	.tab_header-item
+		padding: 15px
+	.cart-dialog .tab_body .accessories .tags
+		padding: 10px
+	.cart-dialog .tab_body .products
+		padding: 0 10px
+	.cart-dialog__title
+		padding-left: 10px
+		font-size: 18px
+	.cart-dialog__products .item-present .item_main
+		flex-direction: row
+		align-items: center
+	.cart-dialog__products .item_main .wrap-right
+		padding-left: 20px
+	.cart-dialog__buy
+		padding: 20px
+		.wrap
+			flex-direction: column-reverse
+			align-items: center
+			justify-content: center
+			.left
+				margin-top: 10px
+	.cart-dialog__products .item_additional
+		padding-left: 20px
+		padding-right: 10px
+	.cart-dialog__products .item .img
+		flex-shrink: 0
+		margin-right: 15px
+	.productList__body
+		.item
+			flex: 0 0 100%
+			max-width: 100%
+	footer
+		.footer_top:before
+			width: 100%
+		.no_padding-left
+			padding-left: 13px !important
+		.no_padding-right
+			padding-right: 13px !important
+		.socialButtons_item
+			margin-right: 3px
+	header
+		.header_bottom 
+			height: auto
+			&:before
+				position: absolute
+				bottom: 0
+				content: ""
+				height: 35px
+				width: 100%
+				background: #333
+			.header_search:first-child
+				justify-content: center
+				border-right: 1px solid #e5272e
+				z-index: 1
+				&:after
+					position: absolute
+					content: ""
+					width: 100%
+					border-right: 1px solid #c3181e
+					right: 0
+					top: 0
+					height: 100%
+					z-index: -1
+				input
+					display: none
+				.header_search-btn
+					background-color: transparent
+					svg path
+						fill: white
+			.header_menu-phone
+				border-right: 1px solid #c3181e
+				position: relative
+				z-index: 1
+				&:before
+					position: absolute
+					content: ""
+					border-right: 1px solid #e5272e
+					width: 100%
+					right: -2px
+					top: 0
+					height: 100%
+					z-index: -1
+			.header_promotions-box
+				order: 1
+				flex: 0 0 50%
+				max-width: 50%
+				height: 35px
+				background: #333333
+				z-index: 10
+				justify-content: center
+				border: 0
+				border-right: 1px solid #141414
+				.header_promotions
+					border-left: 1px solid #141414
+					display: flex
+					height: 100%
+					width: 100%
+					align-items: center
+					justify-content: center
+					position: relative
+					&:before
+						content: ''
+						width: 100%
+						height: 100%
+						border-left: 1px solid #494949
+						position: absolute
+			.header_bonus
+				order: 1
+				flex: 0 0 50%
+				max-width: 50%
+				height: 35px
+				background: #333333
+				z-index: 10
+				justify-content: center
+				.bonus-header,.bonus-box
+					border: 0
+				.bonus-header
+					border-right: 1px solid #494949
+					&:before
+						content: ''
+						width: 100%
+						height: 100%
+						border-left: 1px solid #494949
+						position: absolute
+					&:after
+						content: ''
+						width: 100%
+						height: 100%
+						border-right: 1px solid #141414
+						position: absolute
+			.bonus
+				span
+					position: relative
+					left: auto
+					right: auto
+					top: auto
+					margin-left: 5px
+			.cart-box
+				justify-content: center
+				padding-right: 16px
+				span
+					margin-top: -12px
+					margin-left: 20.5px
+	#reviews h2
+		margin-bottom: 25px
+	#cart-dialog 
+		.select-box,.tab_header
+			margin: 10px
+			height: 40px	
+	.home-btn
+		display: flex
+		a
+			width: 100%
+			height: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+	.header_menu-phone,.main_search,.user,.cart,.catalog_menu,.home-btn
+		flex: 0 0 16.66666666666667%
+		max-width: 16.66666666666667%
+		img
+			margin-right: 0
+	.catalog_menu 
+		position: relative !important
+		&:after
+			width: 100%
+			max-width: 100% !important
+			left: 0 !important
+	
+	
+	header .header_bottom .user-box img
+		margin-right: 0
+
+	.productList
+		.aside__comparison
+			display: none
+
+	.product_addInfo-availability
+		display: block !important
+	
+	
+
+	@media only screen and (max-width : 580px)
+		.cart-dialog__products .item_main
+			padding: 0 10px
+			flex-direction: column
+			align-items: flex-start
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+	.cart-dialog .tab_body .products .item .wrap
+		flex-direction: column
+		align-items: flex-start
+	.cart-dialog .tab_body .products .item .right
+		align-self: flex-end
+		margin-top: 10px
+	#reviews
+		.col-half
+			flex: 0 0 100%
+			max-width: 100%
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 1200px)
+	/**/
+	.header_bottom
+		&.sticky
+			.header_menu-phone
+				display: flex !important
+				position: relative
+				p
+					color: white
+				&:before
+					border-left: 1px solid #e5272e
+					border-right: 1px solid #c3181e
+					content: ""
+					position: absolute
+					width: 100%
+					height: 100%
+					z-index: -1
+					left: 0
+					
+			.header_catalog-header
+				padding-left: 0 !important
+				display: flex
+				justify-content: center
+				i
+					padding-right: 0
+				span
+					display: none !important
+			.catalog_menu
+				flex: 0 0 6.66667%
+				max-width: 6.66667%
+			.header_promotions-box
+				display: flex !important
+				justify-content: center
+				flex: 0 0 13.33333
+				max-width: 13.33333
+			.main_search
+				flex: 0 0 26.66667%
+				max-width: 26.66667%
+			.catalog_menu
+				&:after
+					max-width: 6.66667%

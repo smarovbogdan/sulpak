@@ -1,0 +1,20 @@
+.breadcrumbs
+	padding: 15px 0
+	// &__list
+	// 	display: flex
+	&__link
+		// font-size: 1.2rem
+		color: #999999
+		&:after
+			content: '-'
+			padding: 0 5px
+		&:hover
+			text-decoration: none
+			color: #568da7
+	&__item
+		display: inline-block
+		&:last-child
+			.breadcrumbs__link
+				&:after
+					display: none
+

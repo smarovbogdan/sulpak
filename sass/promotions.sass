@@ -1,0 +1,109 @@
+@import 'main'
+@import 'block/pagination'
+@import 'block/specialProducts'
+@import 'block/breadcrumbs'
+@import 'block/owl-carousel'
+@import 'block/link'
+@import 'block/aside'
+.catalog
+	.h1
+		color: #333333
+		font-size: 30px
+		font-weight: 500
+		line-height: 1.1
+		text-transform: uppercase
+		margin-top: 5px
+		margin-bottom: 25px
+		@media only screen and (max-width : 480px)
+			font-size: 20px
+.block-promotions
+	.pagination
+		margin-bottom: 60px
+.tab_body_prom
+	height: auto
+.tab_header-promotions
+	flex-direction: column
+	
+
+	.tab_header-item
+		background: none
+		text-transform: none
+		font-weight: 500
+		font-size: 14px
+		padding: 14px 0
+		padding-left: 11px
+		border-top: 1px solid #f6f6f6
+		&:last-child
+			border-bottom: 1px solid #f6f6f6
+		&:after
+			display: none
+		&.active
+			background: #f9f9f9
+			// color: #fff !important
+			color: #666
+	.filter
+		&:hover
+			background: transparent
+.tab_body-promotions
+	margin-bottom: 30px
+	text-decoration: none
+	display: block
+	&:hover
+		text-decoration: none
+	P
+		color: #333
+	.img-container
+		// width: 615px
+		// height: 216px
+		img
+			width: 100%
+// .action-text
+// 	color: #000
+.action-title
+	font-size: 18px
+.remainingDays 
+	background: #d30f1c
+	padding: 6px
+	width: 130px
+	text-transform: uppercase
+	color: #fff
+	font-size: 12px
+	text-align: center
+	margin: 10px 0
+.action-description 
+	color: #666
+	line-height: 24px
+	font-size: 14px
+
+.promotions-nav
+	@media only screen and (max-width : 1200px)
+		display: none
+
+.aside__filters-promotions
+	margin-top: 0
+	padding-top: 0
+.select-box-promotions
+	width: 284px
+	@media only screen and (max-width : 580px)
+		margin-bottom: 20px
+	.tab_header-item
+		padding: 9px 16px
+		&:after
+			display: none
+	+ a
+		display: block !important
+
+	.tab_header-item
+		&.active
+			background: transparent
+			color: $accent
+.header_mobile-close-promotions
+	display: none
+	@media only screen and (max-width : 1200px)
+		display: block
+
+.promotions-col
+	@media only screen and (max-width : 580px)
+		flex-direction: column		
+
+
